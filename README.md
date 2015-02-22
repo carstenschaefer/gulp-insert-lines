@@ -41,7 +41,7 @@ var insertLines = require('gulp-insert-lines');
 gulp.task('insert-scripts-bundle', function () {
   gulp.src('./build/index.html')
   .pipe(insertLines({
-      'before': /<script type=.*text.*javascript(.)>$/,
+       'before': /<script\s+type=["']text\/javascript["']>\s*$/i,
       'lineBefore': '<script type="text/javascript" src="bundled.min.js"></script>'
     }))
   .pipe(gulp.dest('dist'));
@@ -71,7 +71,7 @@ var insertLines = require('gulp-insert-lines');
 gulp.task('insert-styles-bundle', function () {
   gulp.src('./build/index.html')
   .pipe(insertLines({
-      'after': /<meta name=(.)format-detection(.) content=(.)telephone=no(.) />$/,
+      'after': /<meta name=["#]format-detection["']\s+content=["']telephone=no["']\s+/>$/,
       'lineAfter': '<link rel="stylesheet" type="text/css" href="build/bundled.min.css" />'
     }))
   .pipe(gulp.dest('dist'));
