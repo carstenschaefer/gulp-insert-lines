@@ -3,7 +3,7 @@ A gulp plugin that will insert a given line before or after the matches of the g
 
 ## Install
 
-Install with [npm](https://npmjs.org/package/gulp-strip-debug)
+Install with [npm](https://npmjs.org/package/gulp-insert-lines)
 
 ```
 npm install --save-dev gulp-insert-lines
