@@ -56,7 +56,7 @@ var insertLines = require('gulp-insert-lines');
 gulp.task('insert-styles-bundle', function () {
   gulp.src('./build/index.html')
   .pipe(insertLines({
-      'before': /</head>$/,
+      'before': /<\/head>$/,
       'lineBefore': '<link rel="stylesheet" type="text/css" href="build/bundled.min.css" />'
     }))
   .pipe(gulp.dest('dist'));

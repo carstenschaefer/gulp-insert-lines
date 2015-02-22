@@ -1,6 +1,6 @@
 {
   "name": "gulp-insert-lines",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A gulp plugin that will insert a given line before or after the matches of the given regex filter.",
   "main": "index.js",
   "dependencies": {
